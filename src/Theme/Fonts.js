@@ -30,6 +30,13 @@ const Fonts = {
             fontSize: '1em',
             textTransform: 'uppercase'
         },
+        description: {
+            marginTop: '0.5em',
+            fontFamily: 'Montserrat',
+            fontWeight: 400,
+            color: Colors.grey,
+            fontSize: '1em',
+        },
         sidebarLink: {
             textDecoration: 'none',
             fontSize: '1.5em',

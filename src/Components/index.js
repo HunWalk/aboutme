@@ -2,6 +2,7 @@ import Button from './Button'
 import SubTitle from './SubTitle'
 import Title from './Title'
 import SmallTitle from './SmallTitle'
+import Description from './Description'
 import Container from './Container'
 import PageContainer from './PageContainer'
 import LeftSidebar from './LeftSidebar'
@@ -19,6 +20,7 @@ import VerticalContainer from './VerticalContainer'
 export {
     Container,
     PageContainer,
+    Description,
     LeftSidebar,
     RightSidebar,
     Button, 
