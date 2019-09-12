@@ -12,12 +12,23 @@ const Fonts = {
             fontFamily: 'Montserrat',
             fontWeight: 900,
             color: Colors.black,
-            fontSize: '4em'
+            fontSize: '2.5em',
+            textTransform: 'uppercase'
         },
         subTitle: {
             fontFamily: 'Montserrat',
-            fontWeight: 'normal',
+            fontWeight: '400',
             color: Colors.grey,
+            fontSize: '1.5em',
+            textTransform: 'uppercase'
+        },
+        smallTitle: {
+            margin: 0,
+            fontFamily: 'Montserrat',
+            fontWeight: 900,
+            color: Colors.black,
+            fontSize: '1em',
+            textTransform: 'uppercase'
         },
         sidebarLink: {
             textDecoration: 'none',
@@ -30,9 +41,9 @@ const Fonts = {
     },
 
     size: {
-        h1: '4em',
-        h2: '3.5em',
-        h3: '3em',
+        h1: '3em',
+        h2: '2.7em',
+        h3: '2.6em',
         h4: '2.5em',
         h5: '2em',
         h6: '1.5em',
