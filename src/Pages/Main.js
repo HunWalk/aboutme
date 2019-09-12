@@ -1,10 +1,20 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import { Card, CardImage, PageContainer, CardContent, Title, SubTitle, Description } from '../Components'
 import { Images } from '../Theme'
 import CardImageContainer from '../Components/CardImageContainer'
 
+import ArticleActions from '../Redux/ArticleRedux'
+
 class Main extends Component
 {
+
+    componentDidMount(){
+        console.tron.log(this.props.article)
+        
+        this.props.getArticles()
+    }
+
     render(){
         return(
             <PageContainer>
@@ -25,4 +35,12 @@ class Main extends Component
     }
 }
 
-export default Main
+const mapStateToProps = (state) => ({
+    article: state.article
+})
+
+const mapDispatchToProps = (dispatch) => ({
+    getArticles: () => dispatch(ArticleActions.articleRequest())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Main)
