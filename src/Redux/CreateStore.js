@@ -1,13 +1,22 @@
 import { createStore, applyMiddleware, compose } from 'redux'
+import createSagaMiddleware from 'redux-saga'
 
 import Reactotron from '../Config/Reactotron'
 
 // creates the store
-export default (rootReducer) => {
+export default (rootReducer, rootSaga) => {
+
   /* ------------- Redux Configuration ------------- */
 
   const middleware = []
   const enhancers = []
+
+  /* ------------- Saga Middleware ------------- */
+
+  const sagaMonitor = Reactotron.createSagaMonitor()
+  const sagaMiddleware = createSagaMiddleware({ sagaMonitor })
+
+  middleware.push(sagaMiddleware)
 
   /* ------------- Assemble Middleware ------------- */
 
@@ -16,7 +25,11 @@ export default (rootReducer) => {
   const createAppropriateStore = createStore
   const store = createAppropriateStore(rootReducer, compose(...enhancers, Reactotron.createEnhancer()))
 
+  let sagasManager = sagaMiddleware.run(rootSaga)
+
   return {
-    store
+    store,
+    sagasManager,
+    sagaMiddleware
   }
 }
