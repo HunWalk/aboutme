@@ -1,4 +1,5 @@
 import apisauce from 'apisauce'
+import Reactotron from '../Config/Reactotron'
 
 const create = (baseURL = 'https://aboutme.cstudios.ninja/api/v1/articles') => {
 
@@ -9,6 +10,8 @@ const create = (baseURL = 'https://aboutme.cstudios.ninja/api/v1/articles') => {
     },
     timeout: 10000
   })
+
+  api.addMonitor(Reactotron.apisauce)
 
   const getArticles = () => api.get('/articles')
 
