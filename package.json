@@ -43,6 +43,7 @@
     ]
   },
   "devDependencies": {
+    "reactotron-apisauce": "^3.0.0",
     "reactotron-react-js": "^3.3.2"
   }
 }
