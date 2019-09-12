@@ -10,8 +10,11 @@
     "react-redux": "^7.1.1",
     "react-scripts": "3.1.1",
     "react-svg": "^10.0.20",
+    "reactotron-redux": "^3.1.1",
+    "redux": "^4.0.4",
     "redux-saga": "^1.0.5",
     "reduxsauce": "^1.1.0",
+    "seamless-immutable": "^7.1.4",
     "styled-components": "^5.0.0-beta.8",
     "styled-media-query": "^2.1.2",
     "webfontloader": "^1.6.28"
