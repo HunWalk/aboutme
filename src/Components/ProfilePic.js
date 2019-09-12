@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
-const ProfilePic = styled.img({
+const ProfilePic = styled.img.attrs({
+    className: 'ProfilePic'
+})({
     marginTop: '2em',
     borderRadius: '7em',
     width: 'auto',

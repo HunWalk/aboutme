@@ -2,7 +2,9 @@ import styled from 'styled-components'
 
 import { Media } from '../Theme'
 
-const CardImage = styled.img({
+const CardImage = styled.img.attrs({
+    className: 'CardImage'
+})({
     maxWidth: '100%',
     transform: 'translateY(-30%)'
 },

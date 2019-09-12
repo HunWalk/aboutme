@@ -2,7 +2,9 @@ import styled from 'styled-components'
 
 import { Media } from '../Theme'
 
-const CardImageContainer = styled.div({
+const CardImageContainer = styled.div.attrs({
+    className: 'CardImageContainer'
+})({
     maxHeight: '20em',
     overflow: 'hidden',
 },

@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 import { Colors } from '../Theme'
 
-const Card = styled.div({
+const Card = styled.div.attrs({
+    className: 'Card'
+})({
     display: 'flex',
     backgroundColor: Colors.light,
     flexDirection: 'column',

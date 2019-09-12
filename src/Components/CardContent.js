@@ -1,8 +1,10 @@
 import styled from 'styled-components'
 
-const CardContent = styled.div({
+const CardContent = styled.div.attrs({
+    className: 'CardContent'
+})({
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: 'column',
     justifyContent: 'flex-start',
     width: 'auto',
     paddingLeft: '2em',
