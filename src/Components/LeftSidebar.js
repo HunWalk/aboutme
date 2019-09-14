@@ -17,6 +17,19 @@ const LeftSidebar = styled.div.attrs({
     borderRightStyle: 'solid',
 },
 
+    Media.greaterThan('lg')({
+        minWidth: '13%',
+        width: '13%',
+        maxWidth: '13%',
+    }),
+
+    Media.between('md','lg')({
+        minWidth: '15%',
+        width: '15%',
+        maxWidth: '15%',
+    }),
+
+
     Media.lessThan('md')({
         display: 'none'
     }),

@@ -5,11 +5,22 @@ import { Media } from '../Theme'
 const CardImageContainer = styled.div.attrs({
     className: 'CardImageContainer'
 })({
-    maxHeight: '20em',
     overflow: 'hidden',
 },
+
+    Media.greaterThan('lg')({
+        height: '18em',
+        maxHeight: '18em',
+    }),
+
+    Media.between('md','lg')({
+        height: '14em',
+        maxHeight: '14em',
+    }),
+
     Media.lessThan('md')({
-        maxHeight: '8em'
+        height: '8em',
+        maxHeight: '8em',
     }),
 )
 

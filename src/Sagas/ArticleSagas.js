@@ -12,6 +12,7 @@ export function * getArticles (api) {
     // do data conversion here if needed
     yield put(ArticleActions.articleSuccess(data))
   } else {
+    console.tron.log('response',response)
     yield put(ArticleActions.articleFailure())
   }
 }

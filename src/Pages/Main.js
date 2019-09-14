@@ -15,21 +15,29 @@ class Main extends Component
         this.props.getArticles()
     }
 
+    renderCard(article){
+        return(
+            <Card key={article.id}>
+                <CardImageContainer>
+                    <CardImage key={article.id} src={article.imageUrl} />
+                </CardImageContainer>
+                <CardContent>
+                    <Title>{article.title}</Title>
+                    <SubTitle>{article.subtitle}</SubTitle>
+                    <Description>
+                        {article.description} 
+                    </Description>
+                </CardContent>
+            </Card>
+        )
+    }
+
     render(){
         return(
             <PageContainer>
-                <Card>
-                    <CardImageContainer>
-                        <CardImage src={Images.lightbulb} />
-                    </CardImageContainer>
-                    <CardContent>
-                        <Title>BUILD SOMETHING AMAZING</Title>
-                        <SubTitle>A regular old blog article</SubTitle>
-                        <Description>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                        </Description>
-                    </CardContent>
-                </Card>
+                {
+                    this.props.article.payload !== null ? this.props.article.payload.map(article => this.renderCard(article)) : null
+                }
            </PageContainer>
         )
     }

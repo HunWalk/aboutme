@@ -5,7 +5,7 @@ import Immutable from 'seamless-immutable'
 
 const { Types, Creators } = createActions({
   articleRequest: null,
-  articleSuccess: ['data'],
+  articleSuccess: ['payload'],
   articleFailure: null
 })
 
@@ -32,6 +32,7 @@ export const request = (state) =>
   state.merge({ fetching: true })
 
 export const success = (state, {payload}) => {
+  console.tron.log('success',payload)
   return state.merge({ fetching: false, error: null, payload })
 }
 

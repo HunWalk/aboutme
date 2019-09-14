@@ -9,6 +9,7 @@ import LeftSidebar from './LeftSidebar'
 import RightSidebar from './RightSidebar'
 import RouterLink from './RouterLink'
 import Group from './Group'
+import HorizontalGroup from './HorizontalGroup'
 import VerticalGroup from './VerticalGroup'
 import ProfilePic from './ProfilePic'
 import Card from './Card'
@@ -29,6 +30,7 @@ export {
     SmallTitle,
     RouterLink,
     Group,
+    HorizontalGroup,
     VerticalGroup,
     VerticalContainer,
     ProfilePic,
